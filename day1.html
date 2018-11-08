@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>day1</title>
+    <script src="https://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-size: 18px;
+            background: orangered;
+
+        }
+
+        .frame {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            height: 400px;
+            margin-top: -200px;
+            margin-left: -200px;
+            border-radius: 2px;
+            box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background: #fff;
+            color: #333;
+
+        }
+
+        .gallery {
+            align-items: center;
+            display: flex;
+            flex-flow: row;
+            flex-wrap: wrap;
+            height: 100%;
+            justify-content: space-evenly;
+            padding: 2px;
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            vertical-align: middle;
+        }
+
+       
+
+        .image {
+            cursor: pointer;
+            flex: 1 0 30%;
+            margin: 1px 2px;
+            animation: scale-down 0.5s ease-in-out;
+            z-index: 0;
+        }
+
+        @keyframes scale-down {
+            0% {
+                transform: scale(3.5);
+                z-index: 1;
+            }
+            100% {
+                transform: scale(1);
+                z-index: 1;
+            }
+        }
+
+        @keyframes scale-up {
+            0% {
+                transform: scale(1);
+                z-index: 1;
+            }
+            100% {
+                transform: scale(3.5);
+                z-index: 1;
+            }
+        }
+        /*图片盒子变换的角度*/
+        .image:nth-child(1){
+			transform-origin: top left;
+		}
+        .image:nth-child(2){
+			transform-origin: top center;
+		}
+		.image:nth-child(3){
+			transform-origin: top right;
+		}
+		.image:nth-child(4){
+			transform-origin: center left;
+		}
+		.image:nth-child(5){
+			transform-origin: center center;
+		}
+		.image:nth-child(6){
+			transform-origin: center right;
+		}
+		.image:nth-child(7){
+			transform-origin: bottom left;
+		}
+		.image:nth-child(8){
+			transform-origin: bottom center;
+		}
+		.image:nth-child(9){
+			transform-origin: bottom right;
+		}
+        div.zoom {
+            animation: scale-up 0.5s ease-in-out;
+            animation-fill-mode: forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="frame">
+        <div class="gallery">
+            <div class="image">
+                <img src="http://100dayscss.com/codepen/40-1.jpg" alt="">
+            </div>
+            <div class="image">
+                <img src="http://100dayscss.com/codepen/40-2.jpg" alt="">
+            </div>
+            <div class="image">
+                <img src="http://100dayscss.com/codepen/40-3.jpg" alt="">
+            </div>
+            <div class="image">
+                <img src="http://100dayscss.com/codepen/40-4.jpg" alt="">
+            </div>
+            <div class="image">
+                <img src="http://100dayscss.com/codepen/40-5.jpg" alt="">
+            </div>
+            <div class="image">
+                <img src="http://100dayscss.com/codepen/40-6.jpg" alt="">
+            </div>
+            <div class="image">
+                <img src="http://100dayscss.com/codepen/40-7.jpg" alt="">
+            </div>
+            <div class="image">
+                <img src="http://100dayscss.com/codepen/40-8.jpg" alt="">
+            </div>
+            <div class="image">
+                <img src="http://100dayscss.com/codepen/40-9.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $('.image').click(function () {
+                $(this).toggleClass('zoom');
+            })
+        })
+    </script>
+
+</body>
+
+</html>
