@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3瀑布流</title>
+    <style>
+        /*最外层*/
+        .container {
+            width: 100%;
+            margin: 0 auto;
+        }
+        /*瀑布流层*/
+        .waterfall {
+            column-count: 3;
+            column-gap: 1em;
+        }
+        /*一个内容层*/
+        .item {
+            padding: 1em;
+            margin: 0 0 1em 0;
+            -moz-page-break-inside: avoid;
+            -webkit-column-break-inside: avoid;
+            break-inside: avoid;
+            border: 1px solid #000;
+        }
+        .item img {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="waterfall">
+            <div class="item">
+                <img src="http://img0.imgtn.bdimg.com/it/u=624117570,2702945706&fm=200&gp=0.jpg">
+                <p>风景图2</p>
+            </div>
+            <div class="item">
+                <img src="http://e.hiphotos.baidu.com/image/pic/item/562c11dfa9ec8a13aff433b3fa03918fa1ecc0f3.jpg">
+                <p>风景图3</p>
+            </div>
+
+            <div class="item">
+                <img src="http://img0.imgtn.bdimg.com/it/u=624117570,2702945706&fm=200&gp=0.jpg">
+                <p>风景图2</p>
+            </div>
+            <div class="item">
+                <img src="http://h.hiphotos.baidu.com/image/pic/item/728da9773912b31b8f9045408b18367adbb4e1df.jpg">
+                <p>风景图3</p>
+            </div>
+            <div class="item">
+                <img src="http://img2.imgtn.bdimg.com/it/u=1977804817,1381775671&fm=200&gp=0.jpg">
+                <p>风景图1</p>
+            </div>
+            <div class="item">
+                <img src="http://g.hiphotos.baidu.com/image/pic/item/024f78f0f736afc33723970bbe19ebc4b74512b4.jpg">
+                <p>风景图2</p>
+            </div>
+            <div class="item">
+                <img src="http://img4.imgtn.bdimg.com/it/u=2539922263,2810970709&fm=200&gp=0.jpg">
+                <p>风景图3</p>
+            </div>
+            <div class="item">
+                <img src="http://d.hiphotos.baidu.com/image/pic/item/728da9773912b31bc300717d8b18367adab4e172.jpg">
+                <p>风景图4</p>
+            </div>
+            <div class="item">
+                <img src="http://c.hiphotos.baidu.com/image/pic/item/1b4c510fd9f9d72a6aa61d70d92a2834359bbb98.jpg">
+                <p>风景图5</p>
+            </div>
+
+            <div class="item">
+                <img src="http://h.hiphotos.baidu.com/image/pic/item/d4628535e5dde711a77a33a0aaefce1b9d16613f.jpg">
+                <p>风景图5</p>
+            </div>
+            <div class="item">
+                <img src="http://e.hiphotos.baidu.com/image/pic/item/fcfaaf51f3deb48f8855158afd1f3a292df578a1.jpg">
+                <p>风景图5</p>
+            </div>
+            <div class="item">
+                <img src="http://b.hiphotos.baidu.com/image/pic/item/3bf33a87e950352a8f1e195b5e43fbf2b2118b61.jpg">
+                <p>风景图5</p>
+            </div>
+
+
+        </div>
+
+    </div>
+</body>
+
+</html>
